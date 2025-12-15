@@ -1,0 +1,5 @@
+# Smithery MCP Server Configuration
+# https://smithery.ai/docs/build/typescript-servers
+
+runtime: "typescript"
+
