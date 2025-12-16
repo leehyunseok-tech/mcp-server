@@ -13,8 +13,8 @@ export const configSchema = z.object({
 // 설정 타입 정의
 type Config = z.infer<typeof configSchema>
 
-// Smithery 배포를 위한 createServer 함수 (default export)
-export default function createServer({ config }: { config: Config }) {
+// Smithery 배포를 위한 createServer 함수
+function createServer({ config }: { config: Config }) {
     const server = new McpServer({
         name: 'my-mcp-server',
         version: '1.0.0'
@@ -638,3 +638,6 @@ ${code}
     // Smithery는 server.server를 반환해야 함
     return server.server
 }
+
+// Default export for Smithery
+export default createServer
